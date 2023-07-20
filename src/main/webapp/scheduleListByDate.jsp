@@ -70,7 +70,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>schedule List By Date</title>
+	<title>Diary</title>
 	<!-- Latest compiled and minified CSS -->	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	
