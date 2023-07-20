@@ -63,7 +63,7 @@
 <br>
 	<h1>공지 수정</h1>
 <hr>
-	<form action="./updateNoticeAciton.jsp" method="post">
+	<form action="./updateNoticeAction.jsp" method="post">
 	<%
 	for(Notice n : notice) {
 	%>

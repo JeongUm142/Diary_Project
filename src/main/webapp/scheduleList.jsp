@@ -153,7 +153,7 @@
 			</tr>
 		<tr>
 			<% 
-				for(int i=0; i<=totalTD; i+=1) {
+				for(int i=0; i<totalTD; i+=1) {
 					int num = i-startBlank+1;
 					
 					if(i !=0 && i%7==0) {
@@ -162,7 +162,6 @@
 					</tr><tr>
 			<% 
 					}
-					
 					//오늘날짜이면
 					String tdStyle = "";
 					if(num>0 && num<=lastDate) {
@@ -170,7 +169,7 @@
 						if(today.get(Calendar.YEAR) == targetYear 
 								&& today.get(Calendar.MONTH) == targetMonth
 								&& today.get(Calendar.DATE) == num) {
-								tdStyle = "border: solid 2px #FFD8D8; background-color:rgba(255, 216, 216, 0.2); font-weight:bold;";
+							tdStyle = "border: solid 2px #FFD8D8; background-color:rgba(255, 216, 216, 0.2); font-weight:bold;";
 						}
 			%>
 								<td style="<%=tdStyle%>">
@@ -180,18 +179,17 @@
 									<div><!-- 일정 memo(5글자만) -->
 										<%
 											for(Schedule s : scheduleList) {
-													if(num == Integer.parseInt(s.scheduleDate)) {
+												if(num == Integer.parseInt(s.scheduleDate)) {
 										%>
 													<div style="color:<%=s.scheduleColor%>"><%=s.scheduleMemo%></div>
 										<%	
 														
-													}
+												}
 											}
 										%>
 									</div>
 								</td>
 			<%
-						
 					} else {
 			%>
 					<td>&nbsp;</td>
